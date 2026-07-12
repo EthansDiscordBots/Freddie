@@ -189,7 +189,7 @@ screen and (-ms-high-contrast: none) {
 }
 
 .cta-btn--resume:hover {
-    color: #5b86e5;
+    color: #333;
     text-decoration: none;
     box-shadow: none
 }
