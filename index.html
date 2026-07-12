@@ -9,38 +9,13 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
 
   <!-- Title: add your Portfolio websites's title here -->
-  <title>ethxnetcable</title>
+  <title>H2O Cornwall</title>
 
-  <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-  <meta name="keywords" content="ethxnetcable, Ethan, Javascript" />
+  <meta name="keywords" content="H2O, Cornwall" />
 
-  <!-- Improve your SEO by adding a small descrption of you -->
-  <meta name="description" content="ethxnetcable" />
+  <link rel="icon" type="image/png" href="./assets/main-logo.jpg" />
 
-  <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
-  <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
-
-  <!-- Add your primary-theme color for the value of content -->
   <meta name="theme-color" content="#36d1dc" />
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <!-- Fill content with the URL of this portfolio you'll host -->
-  <meta property="og:url" content="https://devfolio.js.org/" />
-  <!-- Fill content with the title of your portfolio(Recommended to use what you put in <title> tag) -->
-  <meta property="og:title" content="ethxnetcable" />
-  <!-- Give a short description that'll show up when you/someone shares your portfolio on different platform -->
-  <!-- Add a thumbnail image in assets folder and fill the content attr with URL to that thumbnail 
-      so that a thumbnail image of your portfolio is shown while shared on other platform -->
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <!-- Again fill content attr with the URL of this portfolio you'll host -->
-  <meta property="twitter:url" content="https://devfolio.js.org" />
-  <!-- Recommended to use the same text used within <title> element -->
-  <meta property="twitter:title" content="ethxnetcable" />
-  <!-- short description that shows up while your portfolio is shared -->
-  <!-- Fill content with the URL to the thumbnail image that you'll put in the assets folder -->
 
   <!-- link tags -->
   <link rel="preload" as="style" href="./css/main.css" />
@@ -55,165 +30,68 @@
 </head>
 
 <body>
-  <!-- Hero Section -->
-  <div id="hero">
-    <section class="container">
-      <h1 class="hero-title">
-        Hi, my name is <span id="typedname" class="text-color-main name">Ethan</span>
-        <br />
-        I'm a <span id="typed" class="text-color-main name"></span> programmer
-      </h1>
-      <p class="hero-cta">
-        <a class="cta-btn cta-btn--hero" href="#contact">Get in touch</a>
-      </p>
-    </section>
-    <a href="#about" class="scroll-down-link" aria-label="scroll-down">
-      <div class="scroll-down"></div>
-    </a>
-  </div>
-  <script>
-    const words = ["python", "luau", "javascript", "typescript"];
-    const names = ["Ethan", "ethxnetcable", "Scr1ptxdEthxn"];
-
-    const el = document.getElementById("typed");
-    const elem = document.getElementById("typedname");
-
-    let index = 0;
-    let charIndex = 0;
-    let deleting = false;
-
-    function typeLoop() {
-      const currentWord = words[index % words.length];
-      const currentName = names[index % names.length];
-
-      const maxLength = Math.max(currentWord.length, currentName.length);
-
-      if (!deleting) {
-        // Typing
-        el.textContent = currentWord.substring(0, Math.min(charIndex + 1, currentWord.length));
-        elem.textContent = currentName.substring(0, Math.min(charIndex + 1, currentName.length));
-
-        charIndex++;
-
-        if (charIndex >= maxLength) {
-          deleting = true;
-          setTimeout(typeLoop, 1000); // pause before deleting
-          return;
-        }
-      } else {
-        // Deleting
-        el.textContent = currentWord.substring(0, Math.min(charIndex - 1, currentWord.length));
-        elem.textContent = currentName.substring(0, Math.min(charIndex - 1, currentName.length));
-
-        charIndex--;
-
-        if (charIndex <= 0) {
-          deleting = false;
-          index++; // move to next pair
-        }
-      }
-
-      setTimeout(typeLoop, deleting ? 60 : 120);
-    }
-
-    el.textContent = "";
-    elem.textContent = "";
-    typeLoop();
-  </script>
-
-
-  <!-- /END Hero Section -->
-
-  <!-- About Section -->
   <section id="about">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title">Safe Water For Cornwall</h2>
       <div class="row about-wrapper">
-        <div class="about-wrapper__image">
-          <img class="img-fluid" src="./assets/profile.png" alt="Profile Image" width="450" height="350" />
-        </div>
         <div class="about-wrapper__info">
-          <p class="about-wrapper__info-text">
-            Greetings. My name is Ethan and I am commonly known for my development work in RoMart as a Senior Developer.
-            However
-            outside of RoMart, I do also just generally enjoy programming in both JavaScript/TypeScript and
-            Luau.<br><br>
-            Started roblox lua: January 2023<br>
-            Started JavaScript/TypeScript: May 2023<br>
-            Started Python: June 2023
+          <p class="about-wrapper__info-text" ; style="font-size: large;">
+            Independent Legionella risk assessments and professional water safety consultancy for commercial, domestic,
+            and holiday let properties across the Cornish coast.
             <br><br>
-            I AM NOT A UI DESIGNER IN ANY CAPACTITY. I AM A PROGRAMMER.
+            Providing reliable, fully compliant inspections, tailored advice,
+            and practical solutions to help landlords, businesses,
+            and property owners maintain safe water systems
+            and meet current health and safety regulations.
           </p>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <h2 class="section-title">My work history</h2>
-      <div class="row about-wrapper" style="display: flex; justify-content: center;">
-        <div class="about-wrapper__info" style="display: flex; justify-content: center;">
-          <p class="about-wrapper__info-text">
-            <a href="https://www.roblox.com/communities/13874159/RoMart-Corporation"
-              style="color:blue; text-decoration: none;">RoMart Shopping</a> (663k+ members)
-            (Senior
-            Developer): October 2024 - Present.<br>
-            
-            <a href="https://www.roblox.com/communities/11582289/Freshly-Shopping-UK"
-              style="color:blue; text-decoration: none;">Freshly Shopping</a> (407k+ members)
-            (Senior
-            Developer): May 2026 - Present.<br>
-
-            <a href="https://www.roblox.com/communities/32889454/Swift-Shopping-Corporation"
-              style="color:blue; text-decoration: none;">Swift Shopping</a>
-            (14.7k+ members) (Chief Development Officer): November 2025 - Present.<br>
-            
-            <a href="https://www.roblox.com/communities/4720080/Crystal-Bay-Resorts"
-              style="color:blue; text-decoration: none;">Crystal Bay Resorts</a> (2k
-            members) (Head
-            Developer): August 2023 - May 2025.<br>
-            
-            <a href="https://www.roblox.com/communities/32527698/Flybmi" style="color:blue; text-decoration: none;">Jet 2</a>
-            (1.2k members) (Engineering & Technical Officer):
-            December 2025 - Present.<br>
-            
-            <a href="https://www.roblox.com/communities/33101468/Oak-Hill-Academy"
-              style="color:blue; text-decoration: none;">Oakhill Academy</a> (500 members)
-            (Engineering &
-            Technical Officer): November 2025 - Present.<br>
-            
-          </p>
+        <div class="about-wrapper__image">
+          <img class="img-fluid" src="./assets/main-logo-t.png" alt="Profile Image" width="331" height="283" />
         </div>
 
       </div>
     </div>
-    <p style="font-size: xx-small;">Member counts last updated 26th May 2026<br>Rank displayed is the highest rank
-      achieved in group.<br>Groups are ordered by decreasing member count.</p>
   </section>
 
-  <!-- /END About Section -->
-
-  <!--Projects Section-->
   <section id="projects">
     <div class="container">
       <div class="project-wrapper">
-        <h2 class="section-title dark-blue-text">Projects</h2>
+        <h2 class="section-title dark-blue-text">Services</h2>
 
         <span id="projects-container"></span>
 
-        <script>
-          fetch('/allprojects/projects.html')
-            .then(response => response.text())
-            .then(data => {
-              document.getElementById('projects-container').innerHTML = data;
+        <article class="row" data-featured="true">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Commercial Risk Assessments</h3>
+            <br>
+            <p class="project-wrapper__text-info">
+              Comprehensive Legionella risk assessments for business premises, ensuring full compliance with health and
+              safety regulations.
+            </p>
+          </div>
+        </article>
 
-              const projects = document.querySelectorAll('#projects-container .row');
+        <article class="row" data-featured="true">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Domestic Safety Surveys</h3>
+            <br>
+            <p class="project-wrapper__text-info">
+              Independent water safety inspections for residential properties, providing peace of mind and actionable
+              technical insights.
+            </p>
+          </div>
+        </article>
 
-              projects.forEach(project => {
-                if (project.dataset.featured !== "true") {
-                  project.style.display = "none";
-                }
-              });
-            });
-        </script>
+        <article class="row" data-featured="true">
+          <div class="project-wrapper__text">
+            <h3 class="project-wrapper__text-title">Holiday Let Compliance</h3>
+            <br>
+            <p class="project-wrapper__text-info">
+              Specialized Legionella assessments for rental properties, ensuring guest safety and legislative adherence
+              across Cornwall.
+            </p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -224,25 +102,13 @@
     <div class="container">
       <h2 class="section-title">Contact</h2>
       <div class="contact-wrapper">
-        <p class="contact-wrapper__text">ethxnetcable on discord and roblox.</p>
-        <a href="https://discord.com/users/849729544906997850/profile" class="cta-btn cta-btn--resume">Discord
-          profile.</a>
+        <a href="mailto:h2ocornwall@gmail.com" class="cta-btn cta-btn--resume">h2ocornwall@gmail.com</a>
+        <br>
+        <a href="tel:+447309926715" class="cta-btn cta-btn--resume">+44 7588 216006</a>
       </div>
     </div>
   </section>
   <!-- END Contact Section -->
-
-  <section id="projects">
-    <div class="container">
-      <h2 class="section-title">Other projects</h2>
-      <div class="contact-wrapper">
-        <p class="contact-wrapper__text">Click below to see a list of every project I have worked on.<br><br></p>
-        <p class="hero-cta">
-          <a class="cta-btn cta-btn--hero" href="/projects">All projects</a>
-        </p>
-      </div>
-    </div>
-  </section>
 
   <!-- Footer Section -->
   <footer class="footer">
@@ -268,54 +134,10 @@
           </svg>
         </a>
       </div>
-      <!--
-        <div class="social-links">
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="twitter"
-          >
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="instagram"
-          >
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="codepen"
-          >
-            <i class="fa-brands fa-codepen"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="linkedin"
-          >
-            <i class="fa-brands fa-linkedin"></i>
-          </a>
-          <a
-            href="#!"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="github"
-          >
-            <i class="fa-brands fa-github"></i>
-          </a>
-        </div>
-        -->
       <hr />
     </div>
   </footer>
-  <!-- END Footer Section -->
+
   <script src="./javascript/vanilla-tilt.min.js"></script>
   <script type="text/javascript" src="./javascript/valtilt.js"></script>
 </body>
